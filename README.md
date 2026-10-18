@@ -16,7 +16,7 @@ Each eval recreates one of those reported failures with made-up data where the r
 - `sleep-onset`: twenty minutes to fall asleep reported as three hours
 - `weight-plateau`: a plateau insisted on after losing 21 lb in a month
 
-You need an Anthropic API key to run them:
+I haven't run them against the model yet, so there are no results here. They'll go in this section once I do. If you want to try them yourself, you need an Anthropic API key:
 
 ```bash
 cp .env.example .env   # add ANTHROPIC_API_KEY

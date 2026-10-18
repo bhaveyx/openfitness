@@ -1,0 +1,15 @@
+{
+    "name": "@openfitness/evals",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "typecheck": "tsc",
+        "test": "vitest run",
+        "eval": "tsx --env-file-if-exists=../../.env src/run.ts"
+    },
+    "dependencies": {
+        "@anthropic-ai/sdk": "^0.135.0",
+        "@openfitness/core": "workspace:^"
+    }
+}

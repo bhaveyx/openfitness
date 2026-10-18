@@ -1,0 +1,21 @@
+{
+    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "files": {
+        "includes": ["**", "!**/node_modules"]
+    },
+    "formatter": {
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 120
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "double"
+        }
+    },
+    "linter": {
+        "rules": {
+            "preset": "recommended"
+        }
+    }
+}

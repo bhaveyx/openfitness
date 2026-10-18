@@ -1,10 +1,10 @@
 # OpenFitness
 
-An AI fitness coach that answers questions about your health data without making up numbers.
+An open-source AI fitness coach that runs on your own health data.
 
 I got a Fitbit and started reading what people say about the AI coaches in fitness apps. The complaint that kept coming up was that the coach gets their own data wrong. One told someone that a short ride was their longest of the month. Another said it took them three hours to fall asleep when their tracker showed twenty minutes.
 
-So in OpenFitness the model never writes a number itself. It looks things up with queries over your data and writes its answer with placeholders like `{{q1.minutes_to_fall_asleep}}`, which the app fills in from the query results. If the model types a number on its own, or calls a ride your longest when the data says it isn't, the answer is rejected and the model has to rewrite it. The checking happens in [`packages/core/src/render.ts`](packages/core/src/render.ts) and the queries are in [`tools.ts`](packages/core/src/tools.ts).
+So in OpenFitness, every number the coach tells you comes straight from your data. The model looks things up with queries and writes its answer with placeholders like `{{q1.minutes_to_fall_asleep}}`, which the app fills in from the query results. If the model types a number on its own, or calls a ride your longest when the data says it isn't, the answer is rejected and the model has to rewrite it. The checking happens in [`packages/core/src/render.ts`](packages/core/src/render.ts) and the queries are in [`tools.ts`](packages/core/src/tools.ts).
 
 What works today is the coaching engine and a few evals. Workout plans, meal logging, Fitbit sync and a chat app are next.
 
